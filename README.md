@@ -1,7 +1,7 @@
-<img src="https://github.com/NomiProject/LampREST-Server/blob/master/static/img/lamp_on.png?raw=true" width="48">
+<img src="https://image.flaticon.com/icons/svg/139/139767.svg" width="48">
 
-# LampREST-Server
-A RESTful web-server built-in a Raspberry Pi 3 model B to control the activation of a AC lamp through a TCP/IP network connection and HTTP protocol.
+# Caveirão KillSwitch
+Emergency function to stop robot control services and turn off RaspberryPi remotely
 
 ### Requirements
 
@@ -16,8 +16,8 @@ A RESTful web-server built-in a Raspberry Pi 3 model B to control the activation
 1. Clone the repo
 
     ```bash
-	$ git clone https://github.com/NomiProject/LampREST-Server.git
-	$ cd LampREST-Server/
+	$ git clone https://github.com/Caveirao/Killswitch.git
+	$ cd Killswitch/
 	```
 
 2. Create Python Virtual Environment
@@ -40,15 +40,13 @@ A RESTful web-server built-in a Raspberry Pi 3 model B to control the activation
 	$ pip install -r requirements.txt
     ```
 
-5. Run the **LampREST-Server**
+5. Run the **Killswitch**
 
     ```bash
 	$ python app.py
     ```
 
-6. Locally, navigate to [http://localhost:5000](http://localhost:5000) or remotely [http://your_raspberrypi_ipaddress:5000](http://your_raspberrypi_ipaddress:5000) to access the webservice and control a lamp.
+6. Locally, navigate to [http://localhost:80](http://localhost:80) or remotely [http://your_raspberrypi_ipaddress:80](http://your_raspberrypi_ipaddress:80) to access the service; click in the red button to turn off RaspberryPi.
 
 ---
-
-Developed by [Allex Lima](http://allexlima.com), [Daniel Bispo](https://github.com/danielbispov/), [Paulo Moraes](http://www.moraespaulo.com/) and [Renan Barroncas](https://github.com/renanbarroncas) with ❤️ using [Python](https://www.python.org/). 
-###### Copyright © 2016 [LampREST-Server](https://github.com/NomiProject/LampREST-Server.git) - Licensed by MIT LICENSE.
+###### Copyright © 2017 [Caveirão KillSwitch](https://github.com/Caveirao/Killswitch) - Licensed by MIT LICENSE.
