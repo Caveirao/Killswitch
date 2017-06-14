@@ -5,10 +5,10 @@ Emergency function to stop robot control services and turn off RaspberryPi remot
 
 ### Requirements
 
-1. **Python 2.7 or 3.6** 
+1. **Python 2.7 or 3.6**
     Download Python interpreter [here](https://www.python.org/).
 
-2. **Raspberry Pi 3 Model B** 
+2. **Raspberry Pi 3 Model B**
     Learn more about [RasberryPi project](https://www.raspberrypi.org/).
 
 ### Setup in your RaspberryPi
@@ -28,7 +28,7 @@ Emergency function to stop robot control services and turn off RaspberryPi remot
 	
 	The `–system-site-packages` flag is optional, but by adding it, it allows you isolated environment to access your globally installed packages on your root install, so thing’s like the RPi.GPIO library and such so I find it’s a good idea to add it.
 
-3. Enable Python Virtual Environment 
+3. Enable Python Virtual Environment
 
     ```bash
     $ source env/bin/activate
@@ -46,7 +46,7 @@ Emergency function to stop robot control services and turn off RaspberryPi remot
 	$ python app.py
     ```
 
-6. Locally, navigate to [http://localhost:80](http://localhost:80) or remotely [http://your_raspberrypi_ipaddress:80](http://your_raspberrypi_ipaddress:80) to access the service; click in the red button to turn off RaspberryPi.
+6. Locally, navigate to [http://localhost:8080](http://localhost:8080) or remotely [http://your_raspberrypi_ipaddress:8080](http://your_raspberrypi_ipaddress:8080) to access the service; click in the red button to turn off RaspberryPi.
 
 ---
 ###### Copyright © 2017 [Caveirão KillSwitch](https://github.com/Caveirao/Killswitch) - Licensed by MIT LICENSE.
