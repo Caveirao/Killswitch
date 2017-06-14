@@ -1,28 +1,24 @@
 $(document).ready(function (){
 
-    function switch_lamp(t_request, set_status) {
+    function kill_switch(t_request, set_status) {
         $.ajax({
-            url: "http://" + window.location.href.split("/")[2] + "/api/v1.0/wifi/lamp/" + set_status,
+            url: "http://" + window.location.href.split("/")[2] + "/api/v1.0/wifi/killer/" + set_status,
             type: t_request,
             contentType: "application/json; charset=utf-8",
             beforeSend: function (xhr) {
-                $("#lamp-status").text("...");
+                $('body').html("<div class='text' style='width:100%;margin:20% auto'>...</text>");
             },
             complete: function (result) {
                 var json = JSON.parse(result.responseText)
-                $("#lamp-status").text(json.status);
+                $('body').html("<div class='text' style='width:100%;margin:20% auto'>"+json.status+"</text>");
+                $("#lamp-status").text();
             }
         });
     }
 
-    function desliga() {
 
-    }
-
-    $(".toggle-input").change(function(){
-        if(!$(this).is(":checked"))
-            switch_lamp("PUT", "on");
-        else
-            switch_lamp("PUT", "off");
+    $('button').click(function(){
+        if(confirm("Você tem certeza?"))
+            kill_switch("PUT", "off");
     });
 });

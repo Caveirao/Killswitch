@@ -4,23 +4,20 @@
 
 from flask import request
 from flask_restful import Resource
-from rasp.light import Light
+from subprocess import call
 
 
-class NomiWifiLampAPI(Resource):
+class CaveiraoKillSwitchAPI(Resource):
     def __init__(self):
-        self.light = Light(pin=7)
+        pass
 
-    def get(self):
+    def get(self, kill_switch):
         return {}, 405
 
-    def put(self, lamp_switch):
-        if lamp_switch == "on":
-            self.light.turn_on()
-            return {"status": "ligada"}, 200
-        else:
-            self.light.turn_off()
-            return {"status": "desligada"}, 200
+    def put(self, kill_switch):
+        if kill_switch == "off":
+            call(["sudo", "poweroff"])
+            return {"status": "Robô desligado!"}, 200
 
-    def post(self):
+    def post(self, kill_switch):
         return {}, 405

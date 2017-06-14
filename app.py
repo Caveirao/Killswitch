@@ -5,5 +5,5 @@
 from webserver import Webservice
 
 if __name__ == "__main__":
-    app = Webservice(__name__, debug=False)
+    app = Webservice(__name__, port=8080, debug=False)
     app.execute()

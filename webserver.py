@@ -6,7 +6,7 @@ from flask import Flask, render_template, jsonify
 from flask import make_response
 from flask_restful import Api
 from werkzeug.contrib.cache import SimpleCache
-from api.v1 import NomiWifiLampAPI
+from api.v1 import CaveiraoKillSwitchAPI
 
 
 class Webservice(Flask):
@@ -58,5 +58,5 @@ class Webservice(Flask):
 
     def execute(self):
         self.pages()
-        self.api.add_resource(NomiWifiLampAPI, '/api/v1.0/wifi/lamp/<string:lamp_switch>')
+        self.api.add_resource(CaveiraoKillSwitchAPI, '/api/v1.0/wifi/killer/<string:kill_switch>')
         self.run(self.host, self.port, self.debug)
